@@ -59,7 +59,9 @@ function doconvert_s1() {
         } else if (dakuon_hira_s1do.indexOf(beforearray[i]) != -1) {
             aftertext = aftertext + dakuon_hira_s1do[dakuon_hira_s1do.indexOf(beforearray[i]) + 6];
         } else if (handakuon_hira_s1do.indexOf(beforearray[i]) != -1) {
-            aftertext = aftertext + handakuon_hira_s1do[handakuon_hira_s1do.indexOf(beforearray[i]) + 6] + "゚";
+            console.log(aftertext + "before");
+            aftertext = aftertext + handakuon_hira_s1do[handakuon_hira_s1do.indexOf(beforearray[i]) + 6];
+            console.log(aftertext + "after");
         } else if (canhandakuon_kata_s1do.indexOf(beforearray[i]) != -1) {
             if (beforearray[i+1] == "゚") {
                 aftertext = aftertext + handakuon_kata_s1do[canhandakuon_kata_s1do.indexOf(beforearray[i]) + 6];
@@ -74,10 +76,11 @@ function doconvert_s1() {
         } else if (dakuon_kata_s1do.indexOf(beforearray[i]) != -1) {
             aftertext = aftertext + dakuon_kata_s1do[dakuon_kata_s1do.indexOf(beforearray[i]) + 6];
         } else if (handakuon_kata_s1do.indexOf(beforearray[i]) != -1) {
-            aftertext = aftertext + handakuon_kata_s1do[handakuon_kata_s1do.indexOf(beforearray[i]) + 6] + "゚";
+            aftertext = aftertext + handakuon_kata_s1do[handakuon_kata_s1do.indexOf(beforearray[i]) + 6];
         } else {
             aftertext = aftertext + beforearray[i];
         }
+        console.log(aftertext);
     }
     outputspace.innerHTML = aftertext.replace(/\n/g, "<br>");
 
