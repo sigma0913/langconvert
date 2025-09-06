@@ -3,11 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>まかしか・めせぞか す</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <title>ぞかぢ まかしか・めせぞか す</title>
 </head>
 <body>
-    <input type="text" id="inputfield">
-    <input type="button" id="doconvert">
-    <input type="button" id="undoconvert">
+    <div id="inputspace">
+        <h2>変換/復元前</h2><br>
+        <textarea name="inputfield" id="inputfield" rows="7"></textarea>
+    </div>
+    <div id="buttons">
+        <button id="doconvert" type="submit" name="convert" value="doconvert" class="convertbutton">変換</button>
+        <button id="undoconvert" type="submit" name="convert" value="undoconvert" class="convertbutton">復元</button>
+        <select name="変換方式" id="converttype">
+            <optgroup label="SIGMA">
+                <option value="s1">SIGMA-I</option>
+                <option value="s2">SIGMA-II</option>
+            </optgroup>
+            <optgroup label="Tana">
+                <option value="t1">Tana-v.1.0</option>
+                <option value="t2">Tana-v.1.1</option>
+            </optgroup>
+        </select>
+    </div>
+    <div id="outputspace">
+        <h2>変換/復元後</h2><br>
+        <div id="resultfield">
+            まだ変換/復元されていません。
+        </div>
+    </div>
 </body>
+<script src="./assets/convert.js"></script>
 </html>

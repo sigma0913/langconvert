@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+#inputspace,#outputspace{
+    padding: 5% 6px;
+    margin: 12px;
+    text-align: center;
+    vertical-align: middle;
+    background: linear-gradient(30deg, #fff, #fff, #eef);
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(30deg, #bbf, #fff, #fff) 1;
+    /* animation-name: movebackground;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate; */
+}
+#inputspace{
+    height: 200px;
+}
+#outputspace{
+    height: auto;
+}
+
+h2{
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+}
+
+textarea{
+    display: inline-block;
+    resize: none;
+    height: auto;
+    font-size: 18px;
+    width: 80%;
+    background-color: #fff;
+    border-color: #ddd;
+    border-width: 3px;
+    border-style: solid;
+}
+
+#resultfield{
+    display: inline-block;
+    text-align: left;
+    font-size: 18px;
+    width: 80%;
+    background-color: #fff;
+    border-color: #ddd;
+    border-width: 3px;
+    border-style: solid;
+}
+
+#buttons{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.convertbutton{
+    display: inline-block;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    vertical-align: middle;
+    transition: ease 0.1s;
+}
+
+#doconvert{
+    background-color: #cec;
+}
+#doconvert:hover{
+    background-color: #dfd;
+    font-size: 18px;
+}
+#undoconvert{
+    background-color: #ecc;
+}
+#undoconvert:hover{
+    background-color: #fdd;
+    font-size: 18px;
+}
+
+select{
+    display: inline-block;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    background-color: #cce;
+    transition: ease 0.1s;
+}
