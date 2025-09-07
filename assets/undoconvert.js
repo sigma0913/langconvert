@@ -22,9 +22,11 @@ function unconvert() {
         outputspace.innerHTML = "未実装です";
         //undoconvert_s2();
     } else if (document.getElementById("converttype").value == "u6") {
-        undoconvert_u6();
+        undoconvert_u(6);
     } else if (document.getElementById("converttype").value == "u11") {
-        undoconvert_u11();
+        undoconvert_u(11);
+    } else if (document.getElementById("converttype").value == "u17") {
+        undoconvert_u(17);
     } else if (document.getElementById("converttype").value == "t1") {
         outputspace.innerHTML = "未実装です";
         //doconvert_t1();
@@ -83,25 +85,11 @@ function undoconvert_s1() {
     return aftertext;
 }
 
-function undoconvert_u6() {
+function undoconvert_u(t) {
     aftertext = "";
     for (let i = 0; i < beforearray.length; i++) {
         if (beforearray[i] != "\n") {
-            aftertext = aftertext + String(String.fromCodePoint(beforearray[i].codePointAt(0) - 6));
-        } else {
-            aftertext = aftertext + beforearray[i];
-        }
-    }
-    outputspace.innerHTML = aftertext.replace(/\n/g, "<br>");
-
-    return aftertext;
-}
-
-function undoconvert_u11() {
-    aftertext = "";
-    for (let i = 0; i < beforearray.length; i++) {
-        if (beforearray[i] != "\n") {
-            aftertext = aftertext + String(String.fromCodePoint(beforearray[i].codePointAt(0) - 11));
+            aftertext = aftertext + String(String.fromCodePoint(beforearray[i].codePointAt(0) - t));
         } else {
             aftertext = aftertext + beforearray[i];
         }
