@@ -20,7 +20,11 @@ function unconvert() {
         undoconvert_s1();
     } else if (document.getElementById("converttype").value == "s2") {
         outputspace.innerHTML = "未実装です";
-        //doconvert_s2();
+        //undoconvert_s2();
+    } else if (document.getElementById("converttype").value == "u6") {
+        undoconvert_u6();
+    } else if (document.getElementById("converttype").value == "u11") {
+        undoconvert_u11();
     } else if (document.getElementById("converttype").value == "t1") {
         outputspace.innerHTML = "未実装です";
         //doconvert_t1();
@@ -70,6 +74,34 @@ function undoconvert_s1() {
             aftertext = aftertext + dakuon_kata_s1undo[dakuon_kata_s1undo.lastIndexOf(beforearray[i]) - 6];
         } else if (handakuon_kata_s1undo.lastIndexOf(beforearray[i]) != -1) {
             aftertext = aftertext + handakuon_kata_s1undo[handakuon_kata_s1undo.lastIndexOf(beforearray[i]) - 6];
+        } else {
+            aftertext = aftertext + beforearray[i];
+        }
+    }
+    outputspace.innerHTML = aftertext.replace(/\n/g, "<br>");
+
+    return aftertext;
+}
+
+function undoconvert_u6() {
+    aftertext = "";
+    for (let i = 0; i < beforearray.length; i++) {
+        if (beforearray[i] != "\n") {
+            aftertext = aftertext + String(String.fromCodePoint(beforearray[i].codePointAt(0) - 6));
+        } else {
+            aftertext = aftertext + beforearray[i];
+        }
+    }
+    outputspace.innerHTML = aftertext.replace(/\n/g, "<br>");
+
+    return aftertext;
+}
+
+function undoconvert_u11() {
+    aftertext = "";
+    for (let i = 0; i < beforearray.length; i++) {
+        if (beforearray[i] != "\n") {
+            aftertext = aftertext + String(String.fromCodePoint(beforearray[i].codePointAt(0) - 11));
         } else {
             aftertext = aftertext + beforearray[i];
         }
