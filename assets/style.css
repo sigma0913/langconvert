@@ -59,6 +59,7 @@ textarea{
     display: inline-block;
     text-align: center;
     width: 100%;
+    color: #000;
 }
 
 .convertbutton{
