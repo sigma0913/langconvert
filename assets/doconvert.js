@@ -31,6 +31,8 @@ function convert() {
         doconvert_u(6);
     } else if (document.getElementById("converttype").value == "u11") {
         doconvert_u(11);
+    } else if (document.getElementById("converttype").value == "u12") {
+        doconvert_u(12);
     } else if (document.getElementById("converttype").value == "u17") {
         doconvert_u(17);
     } else if (document.getElementById("converttype").value == "t1") {
